@@ -1,98 +1,109 @@
-Domain,Gating Manager,Gating Vendor,HTTP Status,Response,Ready To License,Cloudflare,Challenge / Block,TollBit Test Result
-cnet.com,,,403,Blocks AI crawler,,No,,
-politico.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare - Just a moment JS challenge,
-hollywoodreporter.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only
-bbc.com,None - open,,200,Serves free,Not on TollBit,No,200 - serves free to GPTBot,
-complex.com,,,200,Serves free,,Yes,,
-apnews.com,TollBit,,200,Serves free,No - private only,Yes,301 Cloudflare redirect then bot-walled; TollBit behind gateway,
-theathletic.com,,,403,Blocks AI crawler,,No,,
-yelp.com,,,403,Blocks AI crawler,,No,,
-people.com,,,403,Blocks AI crawler,,Yes,,
-vanityfair.com,,,200,Serves free,,No,,
-buzzfeed.com,,,200,Serves free,,No,,
-vogue.com,,,200,Serves free,,No,,
-kotaku.com,,,200,Serves free,,Yes,,
-thedailybeast.com,,,200,Serves free,,No,,
-bonappetit.com,,,200,Serves free,,Yes,,
-dailymail.co.uk,,,403,Blocks AI crawler,,No,,
-telegraph.co.uk,,,ERR,Error/timeout,,No,,
-reddit.com,,,403,Blocks AI crawler,,No,,
-techcrunch.com,,,200,Serves free,,No,,
-semafor.com,,,200,Serves free,,No,,
-fastcompany.com,,,403,Blocks AI crawler,,No,,
-wired.com,None - open,,200,Serves free,Not on TollBit,Yes,200 Cloudflare serves free to GPTBot,
-ycombinator.com,,,200,Serves free,,Yes,,
-ft.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare Security Verification challenge,
-allrecipes.com,,,403,Blocks AI crawler,,Yes,,
-thesun.co.uk,,,200,Serves free,,No,,
-tomshardware.com,,,200,Serves free,,No,,
-seriouseats.com,,,403,Blocks AI crawler,,Yes,,
-britannica.com,,,403,Blocks AI crawler,,Yes,,
-pcmag.com,,,403,Blocks AI crawler,,Yes,,
-usatoday.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only
-theguardian.com,None - open,,200,Serves free,Not on TollBit,No,302 redirect consent/geo gate (serves after),
-gizmodo.com,,,200,Serves free,,Yes,,
-bloomberg.com,TollBit,,403,Blocks AI crawler,No - private only,No,403 Varnish Are you a robot interstitial; TollBit behind gateway,
-wikipedia.org,,,200,Serves free,,No,,
-fortune.com,,,200,Serves free,,No,,
-epicurious.com,,,403,Blocks AI crawler,,No,,
-time.com,,,200,Serves free,,No,,
-rollingstone.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only
-washingtonpost.com,Self / CDN block,,ERR,Error/timeout,Not on TollBit,No,No response to GPTBot (timeout/blocked at edge),
-zdnet.com,,,403,Blocks AI crawler,,No,,
-theatlantic.com,,,200,Serves free,,Yes,,
-independent.co.uk,,,200,Serves free,,No,,
-latimes.com,,,200,Serves free,,No,,
-genius.com,,,403,Blocks AI crawler,,Yes,,
-healthline.com,,,200,Serves free,,No,,
-economist.com,TollBit,,403,Blocks AI crawler,No - private only,Yes,403 Cloudflare Just a moment JS challenge; TollBit behind gateway,
-billboard.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only
-medium.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare Just a moment JS challenge,
-hbr.org,,,200,Serves free,,No,,
-deadline.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only
-webmd.com,,,200,Serves free,,Yes,,
-nbcnews.com,,,403,Blocks AI crawler,,No,,
-theverge.com,,,200,Serves free,,No,,
-businessinsider.com,None - open,,200,Serves free,Not on TollBit,No,200 - serves free to GPTBot,
-reuters.com,TollBit,,401,Auth required,No - private only,No,401 AWS CloudFront bot wall; TollBit behind gateway,
-npr.org,,,ERR,Error/timeout,,No,,
-newyorker.com,None - open,,200,Serves free,Not on TollBit,No,200 AWS CloudFront serves free to GPTBot,
-arstechnica.com,,,403,Blocks AI crawler,,No,,
-salon.com,,,200,Serves free,,No,,
-engadget.com,,,200,Serves free,,No,,
-foxnews.com,,,200,Serves free,,No,,
-lifehacker.com,,,403,Blocks AI crawler,,Yes,,
-substack.com,None - open,,200,Serves free,Not on TollBit,Yes,301 Cloudflare redirect,
-spiegel.de,,,403,Blocks AI crawler,,No,,
-cnn.com,TollBit,,451,Legal/geo block,No - private only,No,451 Content Unavailable For Legal Reasons (geo-blocked); TollBit behind gateway,
-pitchfork.com,,,200,Serves free,,No,,
-motherjones.com,,,200,Serves free,,No,,
-axios.com,,,403,Blocks AI crawler,,Yes,,
-ign.com,,,403,Blocks AI crawler,,No,,
-mashable.com,,,403,Blocks AI crawler,,Yes,,
-wsj.com,Self paywall / auth,,401,Auth required,Not on TollBit,No,401 AWS CloudFront bot/auth wall,
-variety.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only
-tripadvisor.com,,,403,Blocks AI crawler,,No,,
-nymag.com,,,200,Serves free,,No,,
-forbes.com,TollBit,TollBit,402,Charges (402),Yes - but still gated,No,307 Varnish redirect; TollBit gating behind tollbit.forbes.com gateway,Token OK; content 400 rate not found for license type - whitelist/private license only
-huffpost.com,,,200,Serves free,,No,,
-stackoverflow.com,,,200,Serves free,,Yes,,
-quora.com,,,403,Blocks AI crawler,,Yes,,
-nationalgeographic.com,,,200,Serves free,,No,,
-nature.com,Self / CDN block,,406,Not acceptable,Not on TollBit,No,406 Varnish Not Acceptable to GPTBot UA,
-propublica.org,,,200,Serves free,,Yes,,
-theintercept.com,,,200,Serves free,,No,,
-lemonde.fr,,,200,Serves free,,No,,
-vice.com,,,200,Serves free,,No,,
-404media.co,,,200,Serves free,,No,,
-vulture.com,,,200,Serves free,,No,,
-polygon.com,,,200,Serves free,,No,,
-entrepreneur.com,,,200,Serves free,,No,,
-theinformation.com,Self paywall / auth,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare Attention Required block,
-slate.com,Manual / email,Manual/other,402,Charges (402),,No,,402 contact partnerships@slate.com (own gate); TollBit token returns rate not found - not on marketplace
-espn.com,,,200,Serves free,,No,,
-inc.com,,,403,Blocks AI crawler,,No,,
-vox.com,,,200,Serves free,,No,,
-nytimes.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,No,403 Varnish own Not Authorized block,
-imdb.com,,,202,Serves free,,No,,
-gq.com,,,200,Serves free,,No,,
+Domain,Gating Manager,Gating Vendor,HTTP Status,Response,Ready To License,Cloudflare,Challenge / Block,TollBit Test Result,AI Licensing Status,AI Counterparties
+cnet.com,,,403,Blocks AI crawler,,No,,,Suing,OpenAI (Ziff Davis)
+politico.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare - Just a moment JS challenge,,Both,OpenAI (license); Cohere (suit) [Axel Springer]
+hollywoodreporter.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only,Suing,Google (Penske)
+bbc.com,None - open,,200,Serves free,Not on TollBit,No,200 - serves free to GPTBot,,None found,"Perplexity legal demand, no suit"
+complex.com,,,200,Serves free,,Yes,,,None found,
+apnews.com,TollBit,,200,Serves free,No - private only,Yes,301 Cloudflare redirect then bot-walled; TollBit behind gateway,,Licensed,OpenAI; Google
+theathletic.com,,,403,Blocks AI crawler,,No,,,Both,Amazon (license); OpenAI/MS (suit via NYT)
+yelp.com,,,403,Blocks AI crawler,,No,,,Licensed,OpenAI
+people.com,,,403,Blocks AI crawler,,Yes,,,Licensed,OpenAI (Dotdash Meredith)
+vanityfair.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+buzzfeed.com,,,200,Serves free,,No,,,None found,
+vogue.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+kotaku.com,,,200,Serves free,,Yes,,,None found,
+thedailybeast.com,,,200,Serves free,,No,,,None found,
+bonappetit.com,,,200,Serves free,,Yes,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+dailymail.co.uk,,,403,Blocks AI crawler,,No,,,Licensed,ProRata
+telegraph.co.uk,,,ERR,Error/timeout,,No,,,None found,not in News Corp deal; prohibits AI training
+reddit.com,,,403,Blocks AI crawler,,No,,,Both,Google + OpenAI (license); Anthropic (suit)
+techcrunch.com,,,200,Serves free,,No,,,None found,sold to Regent 2025
+semafor.com,,,200,Serves free,,No,,,None found,"Microsoft sponsorship, not a license"
+fastcompany.com,,,403,Blocks AI crawler,,No,,,Licensed,ProRata
+wired.com,None - open,,200,Serves free,Not on TollBit,Yes,200 Cloudflare serves free to GPTBot,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+ycombinator.com,,,200,Serves free,,Yes,,,None found,
+ft.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare Security Verification challenge,,Licensed,"OpenAI (+Google, Microsoft, ProRata)"
+allrecipes.com,,,403,Blocks AI crawler,,Yes,,,Licensed,OpenAI (Dotdash Meredith)
+thesun.co.uk,,,200,Serves free,,No,,,Licensed,OpenAI (News Corp)
+tomshardware.com,,,200,Serves free,,No,,,Licensed,OpenAI (Future plc)
+seriouseats.com,,,403,Blocks AI crawler,,Yes,,,Licensed,OpenAI (Dotdash Meredith)
+britannica.com,,,403,Blocks AI crawler,,Yes,,,Suing,Perplexity
+pcmag.com,,,403,Blocks AI crawler,,Yes,,,Suing,OpenAI (Ziff Davis)
+usatoday.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only,Licensed,Perplexity; Meta; Microsoft (Gannett)
+theguardian.com,None - open,,200,Serves free,Not on TollBit,No,302 redirect consent/geo gate (serves after),,Both,OpenAI (license); Cohere (suit)
+gizmodo.com,,,200,Serves free,,Yes,,,None found,
+bloomberg.com,TollBit,,403,Blocks AI crawler,No - private only,No,403 Varnish Are you a robot interstitial; TollBit behind gateway,,None found,
+wikipedia.org,,,200,Serves free,,No,,,Licensed,"Google, Amazon, Meta, Microsoft, Perplexity (Wikimedia Enterprise)"
+fortune.com,,,200,Serves free,,No,,,Licensed,Perplexity; ProRata
+epicurious.com,,,403,Blocks AI crawler,,No,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+time.com,,,200,Serves free,,No,,,Licensed,"OpenAI (+Perplexity, Amazon)"
+rollingstone.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only,Suing,Google (Penske)
+washingtonpost.com,Self / CDN block,,ERR,Error/timeout,Not on TollBit,No,No response to GPTBot (timeout/blocked at edge),,Licensed,OpenAI
+zdnet.com,,,403,Blocks AI crawler,,No,,,Suing,OpenAI (Ziff Davis)
+theatlantic.com,,,200,Serves free,,Yes,,,Both,OpenAI (license); Cohere (suit)
+independent.co.uk,,,200,Serves free,,No,,,Licensed,Perplexity
+latimes.com,,,200,Serves free,,No,,,Both,Perplexity (license); Cohere (suit)
+genius.com,,,403,Blocks AI crawler,,Yes,,,None found,
+healthline.com,,,200,Serves free,,No,,,None found,
+economist.com,TollBit,,403,Blocks AI crawler,No - private only,Yes,403 Cloudflare Just a moment JS challenge; TollBit behind gateway,,Licensed,"Google (NotebookLM, narrow)"
+billboard.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only,Suing,Google (Penske)
+medium.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare Just a moment JS challenge,,None found,blocks GPTBot by default
+hbr.org,,,200,Serves free,,No,,,None found,
+deadline.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only,Suing,Google (Penske)
+webmd.com,,,200,Serves free,,Yes,,,None found,
+nbcnews.com,,,403,Blocks AI crawler,,No,,,None found,parent NBCU suits are film/TV IP
+theverge.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Vox Media]
+businessinsider.com,None - open,,200,Serves free,Not on TollBit,No,200 - serves free to GPTBot,,Both,OpenAI (license); Cohere (suit) [Axel Springer]
+reuters.com,TollBit,,401,Auth required,No - private only,No,401 AWS CloudFront bot wall; TollBit behind gateway,,Both,Meta (license); Ross Intelligence (suit)
+npr.org,,,ERR,Error/timeout,,No,,,None found,blocks AI crawlers
+newyorker.com,None - open,,200,Serves free,Not on TollBit,No,200 AWS CloudFront serves free to GPTBot,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+arstechnica.com,,,403,Blocks AI crawler,,No,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+salon.com,,,200,Serves free,,No,,,None found,
+engadget.com,,,200,Serves free,,No,,,None found,
+foxnews.com,,,200,Serves free,,No,,,Licensed,Meta
+lifehacker.com,,,403,Blocks AI crawler,,Yes,,,Suing,OpenAI (Ziff Davis)
+substack.com,None - open,,200,Serves free,Not on TollBit,Yes,301 Cloudflare redirect,,None found,
+spiegel.de,,,403,Blocks AI crawler,,No,,,Licensed,Perplexity; Google
+cnn.com,TollBit,,451,Legal/geo block,No - private only,No,451 Content Unavailable For Legal Reasons (geo-blocked); TollBit behind gateway,,Both,Meta (license); Perplexity (suit)
+pitchfork.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+motherjones.com,,,200,Serves free,,No,,,Suing,"OpenAI, Microsoft"
+axios.com,,,403,Blocks AI crawler,,Yes,,,Licensed,OpenAI
+ign.com,,,403,Blocks AI crawler,,No,,,Suing,OpenAI (Ziff Davis)
+mashable.com,,,403,Blocks AI crawler,,Yes,,,Suing,OpenAI (Ziff Davis)
+wsj.com,Self paywall / auth,,401,Auth required,Not on TollBit,No,401 AWS CloudFront bot/auth wall,,Both,OpenAI (license); Perplexity (suit) [News Corp]
+variety.com,TollBit,TollBit,402,Charges (402),,No,,Token OK; content 400 rate not found for license type - whitelist/private license only,Suing,Google (Penske)
+tripadvisor.com,,,403,Blocks AI crawler,,No,,,Licensed,Perplexity
+nymag.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Vox Media]
+forbes.com,TollBit,TollBit,402,Charges (402),Yes - but still gated,No,307 Varnish redirect; TollBit gating behind tollbit.forbes.com gateway,Token OK; content 400 rate not found for license type - whitelist/private license only,Suing,Cohere (+Perplexity C&D)
+huffpost.com,,,200,Serves free,,No,,,None found,
+stackoverflow.com,,,200,Serves free,,Yes,,,Licensed,Google; OpenAI
+quora.com,,,403,Blocks AI crawler,,Yes,,,None found,CEO: no licensing deals
+nationalgeographic.com,,,200,Serves free,,No,,,None found,"parent Disney, not Nat Geo"
+nature.com,Self / CDN block,,406,Not acceptable,Not on TollBit,No,406 Varnish Not Acceptable to GPTBot UA,,None found,
+propublica.org,,,200,Serves free,,Yes,,,None found,
+theintercept.com,,,200,Serves free,,No,,,Suing,"OpenAI, Microsoft"
+lemonde.fr,,,200,Serves free,,No,,,Licensed,OpenAI (+Perplexity)
+vice.com,,,200,Serves free,,No,,,None found,
+404media.co,,,200,Serves free,,No,,,None found,
+vulture.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Vox Media]
+polygon.com,,,200,Serves free,,No,,,None found,left Vox Media for Valnet 2025
+entrepreneur.com,,,200,Serves free,,No,,,Both,Perplexity (license); Meta (suit)
+theinformation.com,Self paywall / auth,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare Attention Required block,,None found,
+slate.com,Manual / email,Manual/other,402,Charges (402),,No,,402 contact partnerships@slate.com (own gate); TollBit token returns rate not found - not on marketplace,None found,
+espn.com,,,200,Serves free,,No,,,None found,"parent Disney deal, not ESPN"
+inc.com,,,403,Blocks AI crawler,,No,,,Licensed,ProRata
+vox.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Vox Media]
+nytimes.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,No,403 Varnish own Not Authorized block,,Both,Amazon (license); OpenAI/MS + Perplexity (suits)
+imdb.com,,,202,Serves free,,No,,,None found,
+gq.com,,,200,Serves free,,No,,,Both,OpenAI (license); Cohere (suit) [Conde Nast]
+fandom.com,Self / Cloudflare,,402,Charges (402),,Yes,402 JSON 'Please contact the site owner for access' (manual approval gate),"No TollBit; own 402 gate, contact owner for access - not openly payable",None found,
+wikihow.com,None - open,,200,Serves free,Not on TollBit,No,200 - serves free to GPTBot,,None found,
+cnbc.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,No,403 Akamai bot block,,None found,"parent NBCU, not CNBC"
+aljazeera.com,None - open,,200,Serves free,Not on TollBit,No,200 nginx serves free to GPTBot,,None found,
+nih.gov,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare block,,None found,"US govt, public-domain content"
+bbcgoodfood.com,TollBit,TollBit,402,Charges (402),,No,307 Varnish redirect to tollbit.bbcgoodfood.com; own TollBit gateway,402 requires valid TollBit token (own TollBit gateway) - not openly payable,None found,
+investopedia.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare block,,Licensed,OpenAI (Dotdash Meredith)
+merriam-webster.com,Self / CDN block,,403,Blocks AI crawler,Not on TollBit,Yes,403 Cloudflare block,,Suing,Perplexity (Britannica parent)
+wordpress.com,None - open,,200,Serves free,Not on TollBit,No,200 serves free to GPTBot,,None found,
+tumblr.com,Self / CDN block,,406,Not acceptable,Not on TollBit,No,406 Not Acceptable to GPTBot UA,,None found,
+geeksforgeeks.org,None - open,,200,Serves free,Not on TollBit,No,200 serves free to GPTBot,,None found,
