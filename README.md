@@ -40,12 +40,12 @@ API in full and confirming settlement on Base.
 
 ## Headline finding
 
-Of 97 publishers probed, **zero exposed an open, payable x402 rate**. Every site
-that answered with an HTTP 402 (8 of them) returned "rate not found for license
-type", meaning TollBit whitelist or private-license only, or a manual email gate.
-Roughly 31 blocked the AI crawler outright and 51 served content for free.
-TollBit manages the gate on 12 of them, always behind an approval, never on an
-open rate.
+Of 97 publishers probed, **not one could be paid on demand**. The 8 sites
+that answered with an HTTP 402 were all dead ends: 7 route through
+TollBit and return "rate not found for license type" (whitelist or private-license
+only), and one (Slate) is a manual email gate. Roughly 31 blocked the AI crawler
+outright and 51 served content for free. **Zero exposed an open, payable x402
+rate.**
 
 ### Response breakdown
 
@@ -53,11 +53,15 @@ open rate.
 | --- | --- |
 | Serves free | 51 |
 | Blocks AI crawler | 31 |
-| Charges (402) | 8 |
+| Returned 402, none payable | 8 |
 | Error/timeout | 3 |
 | Auth required | 2 |
 | Legal/geo block | 1 |
 | Not acceptable | 1 |
+
+Note: "Returned 402" counts sites that answered with an HTTP 402 status, not sites
+that could actually be paid. Every 402 in this set is gated behind TollBit approval
+or a manual license. Per-site payability is in the `TollBit Test Result` column.
 
 ## Provenance and license
 
