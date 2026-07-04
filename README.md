@@ -9,10 +9,12 @@ the publisher already have an AI licensing deal in place.
 
 - `data/publisher_gating_probe.csv` (and `.json`) -- 108 content-provider domains,
   each probed with the GPTBot user agent. Columns: domain, gating manager, gating
-  vendor, HTTP status, response type, whether it is licensable, whether Cloudflare
-  fronts it, the observed challenge, the result of a real TollBit API token test
-  (for TollBit-managed sites), and the publisher's public AI-licensing status and
-  counterparties.
+  vendor, HTTP status, response type, whether an agent can openly pay for it,
+  whether Cloudflare fronts it, the observed challenge, the result of a real
+  TollBit API token test (for TollBit-managed sites), and the publisher's public
+  AI-licensing status and counterparties. The `Openly payable?` column is `No` for
+  all 108, with the reason (served free, blocked, manual-approval gate, login wall,
+  geo-blocked); it is the headline finding made a first-class field.
 - `data/x402_open_rail_census_2026-06-30.json` -- the full Coinbase x402 discovery
   registry pulled on June 30 2026 and cross-checked against on-chain settlement on
   Base (22,469 payable endpoints across 1,154 domains).
