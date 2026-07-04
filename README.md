@@ -47,7 +47,17 @@ Roughly 31 blocked the AI crawler outright and 51 served content for free.
 TollBit manages the gate on 12 of them, always behind an approval, never on an
 open rate.
 
-Response breakdown: Serves free (51), Blocks AI crawler (31), Charges (402) (8), Error/timeout (3), Auth required (2), Legal/geo block (1), Not acceptable (1).
+### Response breakdown
+
+| Response | Count |
+| --- | --- |
+| Serves free | 51 |
+| Blocks AI crawler | 31 |
+| Charges (402) | 8 |
+| Error/timeout | 3 |
+| Auth required | 2 |
+| Legal/geo block | 1 |
+| Not acceptable | 1 |
 
 ## Provenance and license
 
