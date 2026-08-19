@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "experiment": "known-x402-positive-control-paid",
+  "stamp": "2026-08-19",
+  "tool": "AgentCash MCP",
+  "workflow": [
+    "discover_api_endpoints https://stableenrich.dev",
+    "check_endpoint_schema POST https://stableenrich.dev/api/exa/search",
+    "fetch with paymentProtocol=x402, paymentNetwork=base, maxAmount=0.02"
+  ],
+  "request": {
+    "method": "POST",
+    "url": "https://stableenrich.dev/api/exa/search",
+    "body": {
+      "query": "Shoal Research x402 publisher content gating experiment",
+      "numResults": 1
+    }
+  },
+  "challenge": {
+    "x402Version": 2,
+    "priceUsd": 0.01,
+    "acceptedNetworks": [
+      "eip155:8453",
+      "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+    ],
+    "scheme": "exact"
+  },
+  "attempts": [
+    {
+      "network": "solana",
+      "result": "payment rejected before settlement",
+      "error": "transaction_simulation_failed: BlockhashNotFound",
+      "transactionHash": null
+    },
+    {
+      "network": "base",
+      "result": "success",
+      "transactionHash": "0xdf5ef8266b2edf073fbe85340fe037b5538de7295f007820848dd7eb657d85f2"
+    }
+  ],
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "requestId": "39dcaf247047966e29b260c0f3269555",
+      "resolvedSearchType": "",
+      "results": [
+        {
+          "id": "https://www.shoal.gg/p/x402-is-more-than-agent-payments",
+          "title": "x402 Is More Than Agent Payments - Shoal Research",
+          "url": "https://www.shoal.gg/p/x402-is-more-than-agent-payments",
+          "publishedDate": "2026-08-14T17:31:49.109Z"
+        }
+      ],
+      "searchTime": 1112.4,
+      "costDollars": {
+        "total": 0.007,
+        "search": {
+          "neural": 0.007
+        }
+      }
+    }
+  },
+  "onchainReceipt": {
+    "rpc": "https://mainnet.base.org",
+    "rpcMethod": "eth_getTransactionReceipt",
+    "network": "base (eip155:8453)",
+    "transactionHash": "0xdf5ef8266b2edf073fbe85340fe037b5538de7295f007820848dd7eb657d85f2",
+    "status": "0x1",
+    "blockNumber": "0x2fdc5d2",
+    "blockHash": "0xf3a21e96aedf1f6603c571db35641498852f0549823de1d3e0c5ba2d5dd8aee9",
+    "asset": "USDC",
+    "tokenContract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "payer": "0x01C956c98b8e2938573AFFbF5897a6120D202816",
+    "payTo": "0x325bdF6F7efAB24a2210c48c1b64cAb2eAe1d430",
+    "amountAtomic": "10000",
+    "amountUsd": 0.01,
+    "explorerUrl": "https://basescan.org/tx/0xdf5ef8266b2edf073fbe85340fe037b5538de7295f007820848dd7eb657d85f2"
+  },
+  "secretsStored": false
+}

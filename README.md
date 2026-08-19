@@ -1,112 +1,120 @@
-# 402 / AI Content-Gating Probe -- Top Content Providers
+# x402 publisher content-gating probe
 
-Dataset behind Shoal Research's essay **The Internet is Breaking**. It answers one
-question empirically: when an AI agent shows up at a major content provider, what
-happens, who is managing the gate, can the agent actually pay to get in, and does
-the publisher already have an AI licensing deal in place.
+Public data and reproducible collection code for Shoal Research's publisher-gating
+experiment, cited in **The Internet is Breaking**. The experiment asks whether a
+major content provider will let an AI crawler pay for access on demand, and whether
+an HTTP 402 response actually contains an open x402 payment challenge.
 
-## What is here
+## Result: 2026-08-19 rerun
 
-- `data/publisher_gating_probe.csv` (and `.json`) -- 108 content-provider domains,
-  each probed with the GPTBot user agent. Columns: domain, gating manager, gating
-  vendor, HTTP status, response type, whether an agent can openly pay for it,
-  whether Cloudflare fronts it, the observed challenge, the result of a real
-  TollBit API token test (for TollBit-managed sites), and the publisher's public
-  AI-licensing status and counterparties. The `Openly payable?` column is `No` for
-  all 108, with the reason (served free, blocked, manual-approval gate, login wall,
-  geo-blocked); it is the headline finding made a first-class field.
-- `data/x402_open_rail_census_2026-06-30.json` -- the full Coinbase x402 discovery
-  registry pulled on June 30 2026 and cross-checked against on-chain settlement on
-  Base (22,469 payable endpoints across 1,154 domains).
+The headline result was reproduced: **0 of 108 publisher homepages returned a
+valid x402 payment challenge.** Sixteen returned HTTP 402, but none supplied
+machine-payable requirements in a `Payment-Required`/`X-Payment-Required` header
+or JSON body.
 
-## How the domains were selected
+| Observed result | Publishers |
+| --- | ---: |
+| Served the request for free | 53 |
+| Blocked the AI user agent | 31 |
+| Returned HTTP 402, not x402-payable | 16 |
+| Network error or timeout after two attempts | 3 |
+| Required authentication | 2 |
+| Returned HTTP 406 | 2 |
+| Returned HTTP 451 | 1 |
+| **Total** | **108** |
 
-The list is built from two overlapping frames.
+Of the 16 HTTP 402 responses, 10 returned a TollBit token wall and 6 returned
+a manual licensing or generic contact response. A second, authenticated check of
+all 13 publishers labeled TollBit-managed in the baseline returned HTTP 403 for
+every rate lookup, with the response that the content provider had disallowed
+access to the page. No rate was returned.
 
-1. **Traffic.** The highest-traffic content-provider websites by SimilarWeb's
-   category rankings (News & Media, Arts & Entertainment, Reference, Finance;
-   May 2026 data), cross-checked against Press Gazette's ranking of the biggest news
-   websites in the world (2026). This is what anchors the sample to the sites AI most
-   wants to read.
-2. **Licensing relevance.** The publishers named in the major AI-content-licensing
-   deals and lawsuits, and the sites listed on the leading AI-licensing marketplace
-   (TollBit). This is what makes the sample the plausible universe for gating and
-   pricing content to machines.
+As a positive control, the same run called a known x402 endpoint. The unpaid
+request returned a valid x402 v2 challenge, and a subsequent $0.01 USDC payment on
+Base returned the requested data. The settlement is independently inspectable in
+the stored receipt and on
+[BaseScan](https://basescan.org/tx/0xdf5ef8266b2edf073fbe85340fe037b5538de7295f007820848dd7eb657d85f2).
+This shows that the test could recognize and complete an x402 flow; it does not
+show that any publisher in the sample offered one.
 
-**Content providers only.** Search engines and portals (Google, Bing, Yahoo, MSN,
-Yandex, Baidu, Naver, DuckDuckGo), social networks, e-commerce, and streaming are
-excluded. Reddit, Wikipedia, Substack, Medium, Stack Overflow, and WordPress are
-included because they are content platforms, not search or commerce.
+## Fresh x402 registry census
 
-**Honest caveats on curation.** The sample is deliberately weighted toward
-English-language publishers, and it includes a set of high-authority editorial
-outlets (The Information, 404 Media, Semafor, ProPublica, Nature, Harvard Business
-Review, and the entertainment and technology trades) whose influence exceeds their
-raw traffic. It is therefore not a strict traffic ranking. The largest content
-providers it does not cover are non-English or portal-family properties outside the
-probe's licensing ecosystem, including Yahoo News Japan, globo.com (Brazil),
-namu.wiki (South Korea), MSN, and Yahoo Finance.
+The Coinbase CDP x402 discovery registry was paginated in full during the same
+run. Page-level response hashes document collection completeness and integrity.
 
-## Method
+| Registry field | 2026-08-19 snapshot |
+| --- | ---: |
+| HTTP endpoints | 15,073 |
+| Distinct domains | 1,570 |
+| Domains with provider-reported 30-day calls | 1,561 |
+| Sum of provider-reported 30-day endpoint calls | 317,660 |
+| Matches among the 108 publisher domains | 0 |
 
-Each domain was requested with the GPTBot user agent and the raw HTTP status and
-body were recorded. Sites listed on TollBit were then tested with a valid TollBit
-developer key and a registered agent, requesting content through the TollBit
-gateway. The open-rail census was built by paginating the Coinbase x402 discovery
-API in full and confirming settlement on Base. The AI-licensing status of each
-publisher was compiled from the AI companies' own announcements, Press Gazette's
-deal tracker, and the filed complaints, and is current to mid-2026.
+These are point-in-time registry fields, not independently reconstructed on-chain
+totals. The same payer may appear at more than one endpoint, and one endpoint may
+advertise multiple networks. The earlier 2026-06-30 snapshot remains in the repo
+for comparison; registry membership and aggregation changed between snapshots.
 
-## Headline finding
+## Data files
 
-Of 108 content providers probed, **not one could be paid on demand**. The 10 sites
-that answered with an HTTP 402 were all dead ends: 8 route through TollBit (7 return
-"rate not found for license type" and BBC Good Food requires a token on its own
-`tollbit.` gateway), one (Slate) is a manual email gate, and one (Fandom) returns a
-402 that reads "please contact the site owner for access." Every one is a whitelist
-or manual-approval gate. Roughly 35 blocked the AI crawler outright and 55 served
-content for free. **Zero exposed an open, payable x402 rate.**
+- [`data/publisher_gating_probe_2026-08-19.csv`](data/publisher_gating_probe_2026-08-19.csv)
+  and [JSON](data/publisher_gating_probe_2026-08-19.json): normalized results for
+  all 108 publishers, including final status, classification, response evidence,
+  hashes, baseline fields, and authenticated TollBit lookup results.
+- [`data/publisher_402_responses_2026-08-19.csv`](data/publisher_402_responses_2026-08-19.csv):
+  the 16 HTTP 402 responses in one reviewable table.
+- [`data/raw/publisher_http_responses_2026-08-19.json`](data/raw/publisher_http_responses_2026-08-19.json):
+  request configuration, redirect chains, selected response headers, retries,
+  hashes, and capped error/challenge body evidence.
+- [`data/raw/tollbit_rate_responses_2026-08-19.json`](data/raw/tollbit_rate_responses_2026-08-19.json):
+  sanitized responses from the authenticated TollBit rate endpoint.
+- [`data/x402_open_rail_census_2026-08-19.json`](data/x402_open_rail_census_2026-08-19.json)
+  and [page receipts](data/raw/x402_registry_page_receipts_2026-08-19.json): the
+  current registry census and a SHA-256 receipt for every fetched page.
+- [`data/raw/x402_positive_control_challenge_2026-08-19.json`](data/raw/x402_positive_control_challenge_2026-08-19.json)
+  and [paid result](data/x402_positive_control_paid_2026-08-19.json): the unpaid
+  x402 challenge, paid API response, and successful Base transaction receipt.
+- [`data/validation_report_2026-08-19.md`](data/validation_report_2026-08-19.md):
+  machine-generated assertions and baseline differences.
+- `data/publisher_gating_probe.csv` and `.json`: the June/July 2026 baseline,
+  including separately researched AI-licensing annotations.
 
-### Response breakdown
+See [`METHODOLOGY.md`](METHODOLOGY.md) for the sample frame, classification rules,
+collection sequence, limitations, and data-handling policy.
 
-| Response | Count |
-| --- | --- |
-| Serves free | 55 |
-| Blocks AI crawler | 35 |
-| Returned 402, none payable | 10 |
-| Error/timeout | 3 |
-| Auth required | 2 |
-| Not acceptable | 2 |
-| Legal/geo block | 1 |
+## Reproduce the collection
 
-Note: "Returned 402" counts sites that answered with an HTTP 402 status, not sites
-that could actually be paid. Every 402 in this set is gated behind TollBit approval,
-a manual license, or a "contact the owner" wall. Per-site payability is in the
-`TollBit Test Result` column.
+The scripts require Node.js 20 or newer and have no package dependencies.
 
-## AI licensing status
+```sh
+export PROBE_STAMP=YYYY-MM-DD
+npm run probe:publishers
+npm run census:x402
+npm run probe:x402-control
+TOLLBIT_ENV_FILE=/absolute/path/to/private.env npm run probe:tollbit
+npm run verify
+```
 
-Every publisher is annotated with its public AI-licensing posture: whether it has
-**licensed** content to an AI company, is **suing** one, is **both** (licensed to
-one AI company while suing another), or has **no public deal or suit** found.
+The TollBit step needs a valid developer key in the private file shown in
+`.env.example`. The paid positive control requires an x402-capable wallet or agent;
+the exact AgentCash workflow used for this rerun is documented in
+[`METHODOLOGY.md`](METHODOLOGY.md). No credential is written to an output file.
 
-| Status | Count |
-| --- | --- |
-| Licensed | 25 |
-| Suing | 16 |
-| Both (licensed and suing) | 25 |
-| None found | 42 |
+## Interpretation
 
-The licensing posture explains the probe. Publishers that have licensed their
-content overwhelmingly **block the open crawler (HTTP 403)**, because they route AI
-access through the paid channel instead of the open web. The sites that return an
-HTTP 402 are mostly publishers in active litigation (the Penske Media titles suing
-Google) or licensed elsewhere, using the 402 as a **defensive gate rather than an
-open, payable rail**. The gate is going up everywhere; the toll booth that takes an
-agent's money on demand is not.
+An HTTP 402 status is evidence of a gate, not evidence that a requester can pay
+it. This project marks a publisher as x402-payable only when the 402 response
+contains parseable payment requirements. On 2026-08-19, that condition was false
+for every publisher in the sample.
 
-## Provenance and license
+The sample is curated, English-language-heavy, and not a random census of the web.
+It probes only the homepage, from one runner, with a GPTBot-formatted user agent.
+Configurations can vary by URL, account, IP reputation, geography, and time. Three
+publishers timed out after two attempts, so their current gate could not be
+observed. Findings should be cited as a dated snapshot.
 
-Probes run June 28 2026 and backfilled July 4 2026; census pulled June 30 2026;
-licensing status current to mid-2026. Data released under CC BY 4.0. Point-in-time
-snapshot; gating configurations and licensing deals change.
+## License
+
+Data, methodology, and code are released under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Attribute Shoal
+Research and link to this repository. See [`LICENSE`](LICENSE).
