@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "stamp": "2026-08-19",
+  "source": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources",
+  "pageSize": 1000,
+  "totalExpected": 15073,
+  "totalFetched": 15073,
+  "pages": [
+    {
+      "offset": 0,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=0",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:14.109Z",
+      "durationMs": 925,
+      "itemCount": 1000,
+      "responseBytes": 3059038,
+      "responseSha256": "ef68a80c1fcd7a2ea52de4f293b7f8bebf74841bee10469f08ec8220c8512325",
+      "pagination": {
+        "limit": 1000,
+        "offset": 0,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 1000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=1000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:15.086Z",
+      "durationMs": 971,
+      "itemCount": 1000,
+      "responseBytes": 2953006,
+      "responseSha256": "bedf4331d1e1deb11ece320fbd052d566d53654be9e1874856caf17da26d47e9",
+      "pagination": {
+        "limit": 1000,
+        "offset": 1000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 2000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=2000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:16.693Z",
+      "durationMs": 2577,
+      "itemCount": 1000,
+      "responseBytes": 3128132,
+      "responseSha256": "3996072ba9dcdd0cf82f6d100ba149ef8ae562eb2cb3036d67fc110a64d9e5d5",
+      "pagination": {
+        "limit": 1000,
+        "offset": 2000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 3000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=3000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:15.393Z",
+      "durationMs": 1276,
+      "itemCount": 1000,
+      "responseBytes": 2933158,
+      "responseSha256": "1e1c3e61258edd5941eef3103ad4dd8420b4fac422200b2b726bf8abf6995275",
+      "pagination": {
+        "limit": 1000,
+        "offset": 3000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 4000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=4000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:15.598Z",
+      "durationMs": 1481,
+      "itemCount": 1000,
+      "responseBytes": 2986211,
+      "responseSha256": "54a4e10c977ec3460f9e00708203beab44642a8da377213c091675810f53521b",
+      "pagination": {
+        "limit": 1000,
+        "offset": 4000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 5000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=5000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:15.680Z",
+      "durationMs": 586,
+      "itemCount": 1000,
+      "responseBytes": 2847959,
+      "responseSha256": "1713aafabebe6994ec21711afa728f8d7289a4848d387de0536b5631d6ddc8f5",
+      "pagination": {
+        "limit": 1000,
+        "offset": 5000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 6000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=6000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:16.938Z",
+      "durationMs": 1539,
+      "itemCount": 1000,
+      "responseBytes": 5127123,
+      "responseSha256": "395c96cd461123711d670e3576bbb7d57f45ed79607b3bf77bec4a1fe0fb8ff6",
+      "pagination": {
+        "limit": 1000,
+        "offset": 6000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 7000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=7000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:16.614Z",
+      "durationMs": 1010,
+      "itemCount": 1000,
+      "responseBytes": 3425505,
+      "responseSha256": "9f13b2c1eb0486a51dcd4e88b5f2a84e1ac66952124bbe54a39be50f9040f99c",
+      "pagination": {
+        "limit": 1000,
+        "offset": 7000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 8000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=8000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:16.553Z",
+      "durationMs": 867,
+      "itemCount": 1000,
+      "responseBytes": 2766106,
+      "responseSha256": "2e68aa06de70768a63cbe39d9c220db0ef0fa1c9b3175a428beb41e5a6e362b9",
+      "pagination": {
+        "limit": 1000,
+        "offset": 8000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 9000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=9000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:19.538Z",
+      "durationMs": 2979,
+      "itemCount": 1000,
+      "responseBytes": 3467406,
+      "responseSha256": "81f81a85d89ef1315db1efc798d82b3e84777aabd6fd691a8f4bbe702c5e1834",
+      "pagination": {
+        "limit": 1000,
+        "offset": 9000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 10000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=10000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:18.577Z",
+      "durationMs": 1956,
+      "itemCount": 1000,
+      "responseBytes": 2538741,
+      "responseSha256": "d70800e2f7a2520d0d6ad47d360faca080a01bcbbbeaa395462a4b11a2a2dcf8",
+      "pagination": {
+        "limit": 1000,
+        "offset": 10000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 11000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=11000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:17.910Z",
+      "durationMs": 1211,
+      "itemCount": 1000,
+      "responseBytes": 2258807,
+      "responseSha256": "d727f5f1c525c43df153e31f24174ef84c0a2faf91598c808f276728fc7254e0",
+      "pagination": {
+        "limit": 1000,
+        "offset": 11000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 12000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=12000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:17.717Z",
+      "durationMs": 767,
+      "itemCount": 1000,
+      "responseBytes": 1777682,
+      "responseSha256": "727c0cad0d228d31ce6a089f26c245af9836ef656e11232c66cf388b4e369025",
+      "pagination": {
+        "limit": 1000,
+        "offset": 12000,
+        "total": 15072
+      }
+    },
+    {
+      "offset": 13000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=13000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:18.626Z",
+      "durationMs": 904,
+      "itemCount": 1000,
+      "responseBytes": 2027284,
+      "responseSha256": "68395e13e41a03a99ab6abb8350e2e1c4fdc0c6acd470e0a116f81693976ea9c",
+      "pagination": {
+        "limit": 1000,
+        "offset": 13000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 14000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=14000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:18.402Z",
+      "durationMs": 486,
+      "itemCount": 1000,
+      "responseBytes": 1965931,
+      "responseSha256": "088f162c65f7dc7f45f972d46e965d50b1c4803e2d8355aa57dd11ff2f11014b",
+      "pagination": {
+        "limit": 1000,
+        "offset": 14000,
+        "total": 15073
+      }
+    },
+    {
+      "offset": 15000,
+      "url": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?type=http&limit=1000&offset=15000",
+      "status": 200,
+      "fetchedAt": "2026-08-19T17:26:18.918Z",
+      "durationMs": 510,
+      "itemCount": 73,
+      "responseBytes": 186838,
+      "responseSha256": "99d83935f9db1bf33a9c0ebe312e2b95ec0e739897bb415483195a6fd532e9cd",
+      "pagination": {
+        "limit": 1000,
+        "offset": 15000,
+        "total": 15073
+      }
+    }
+  ]
+}

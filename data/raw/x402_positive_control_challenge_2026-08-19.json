@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "experiment": "known-x402-positive-control-unpaid",
+  "stamp": "2026-08-19",
+  "requestedAt": "2026-08-19T19:33:50.071Z",
+  "durationMs": 323,
+  "request": {
+    "method": "POST",
+    "url": "https://stableenrich.dev/api/exa/search",
+    "body": {
+      "query": "Shoal Research x402 publisher content gating experiment",
+      "numResults": 1
+    }
+  },
+  "response": {
+    "status": 402,
+    "contentType": "application/json",
+    "body": "",
+    "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "paymentRequiredHeader": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9zdGFibGVlbnJpY2guZGV2L2FwaS9leGEvc2VhcmNoIiwibWV0aG9kIjoiUE9TVCIsImRlc2NyaXB0aW9uIjoiRXhhIFNlYXJjaCAtIE5ldXJhbCBzZWFyY2ggYWNyb3NzIHRoZSB3ZWIiLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24iLCJ0YWdzIjpbIkV4YSJdLCJzZXJ2aWNlTmFtZSI6IlN0YWJsZUVucmljaCJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MzI1YmRGNkY3ZWZBQjI0YTIyMTBjNDhjMWI2NGNBYjJlQWUxZDQzMCIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0QgQ29pbiIsInZlcnNpb24iOiIyIn19LHsic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoic29sYW5hOjVleWt0NFVzRnY4UDhOSmRUUkVwWTF2enFLcVpLdmRwIiwiYW1vdW50IjoiMTAwMDAiLCJhc3NldCI6IkVQakZXZGQ1QXVmcVNTcWVNMnFOMXh6eWJhcEM4RzR3RUdHa1p3eVREdDF2IiwicGF5VG8iOiI4RWdBQ3BaMTZYV0V0N1lqSlBzaDFaaGVWUlpVR21td1E4bkpkbUExbzV3NCIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7ImZlZVBheWVyIjoiMndLdXBMUjlxNndYWXBwdzhHcjJOdld4S0JVcW00UFBKS2tRZm94SERCZzQifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiUE9TVCIsImJvZHlUeXBlIjoianNvbiIsImJvZHkiOnsicXVlcnkiOiJoZWRnZSBmdW5kIHBvcnRmb2xpbyBtYW5hZ2VyIE5ldyBZb3JrIiwiY2F0ZWdvcnkiOiJwZW9wbGUiLCJ0eXBlIjoiYXV0byIsIm51bVJlc3VsdHMiOjEwfX19LCJzY2hlbWEiOnsiJHNjaGVtYSI6Imh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1hIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiaW5wdXQiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidHlwZSI6eyJ0eXBlIjoic3RyaW5nIiwiY29uc3QiOiJodHRwIn0sIm1ldGhvZCI6eyJ0eXBlIjoic3RyaW5nIiwiZW51bSI6WyJQT1NUIiwiUFVUIiwiUEFUQ0giXX0sImJvZHlUeXBlIjp7InR5cGUiOiJzdHJpbmciLCJlbnVtIjpbImpzb24iLCJmb3JtLWRhdGEiLCJ0ZXh0Il19LCJib2R5Ijp7IiRzY2hlbWEiOiJodHRwczovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC8yMDIwLTEyL3NjaGVtYSJ9fSwicmVxdWlyZWQiOlsidHlwZSIsIm1ldGhvZCIsImJvZHlUeXBlIiwiYm9keSJdLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9fSwicmVxdWlyZWQiOlsiaW5wdXQiXX19fX0=",
+    "paymentRequiredHeaderSha256": "0d5c28f73830077a4a48fe632e1c6cffd35bdca9364622a7352fa38beae9efe5",
+    "parsedChallenge": {
+      "x402Version": 2,
+      "resource": {
+        "url": "https://stableenrich.dev/api/exa/search",
+        "method": "POST",
+        "description": "Exa Search - Neural search across the web",
+        "mimeType": "application/json",
+        "tags": [
+          "Exa"
+        ],
+        "serviceName": "StableEnrich"
+      },
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "eip155:8453",
+          "amount": "10000",
+          "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "payTo": "0x325bdF6F7efAB24a2210c48c1b64cAb2eAe1d430",
+          "maxTimeoutSeconds": 300,
+          "extra": {
+            "name": "USD Coin",
+            "version": "2"
+          }
+        },
+        {
+          "scheme": "exact",
+          "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+          "amount": "10000",
+          "asset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "payTo": "8EgACpZ16XWEt7YjJPsh1ZheVRZUGmmwQ8nJdmA1o5w4",
+          "maxTimeoutSeconds": 300,
+          "extra": {
+            "feePayer": "2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4"
+          }
+        }
+      ]
+    }
+  },
+  "validPositiveControl": true
+}

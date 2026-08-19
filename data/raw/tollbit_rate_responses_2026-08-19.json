@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "experiment": "tollbit-rate-availability-probe",
+  "stamp": "2026-08-19",
+  "startedAt": "2026-08-19T17:25:33.137Z",
+  "completedAt": "2026-08-19T17:25:35.068Z",
+  "methodology": {
+    "endpoint": "GET https://gateway.tollbit.com/dev/v2/rates/{url}",
+    "authentication": "TollbitKey supplied at runtime; never serialized",
+    "targetSelection": "every baseline publisher labeled TollBit-managed",
+    "targetPath": "publisher homepage",
+    "payment": "none; rate lookup only"
+  },
+  "summary": {
+    "targets": 13,
+    "statusCounts": {
+      "403": 13
+    },
+    "ratesReturned": 0
+  },
+  "results": [
+    {
+      "targetUrl": "https://hollywoodreporter.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:33.559Z",
+      "durationMs": 422,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "d095f8a744c2c15b8b333bd80c81071eff33bf6f369550d6e6ea42f5304cf51c",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://hollywoodreporter.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://apnews.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:33.839Z",
+      "durationMs": 279,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "4a14875e24ea5234b2577c3dec8ffb34c035e537ee869a50360e755c1d918141",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://apnews.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://usatoday.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:33.962Z",
+      "durationMs": 123,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "63b02e16e71f8e86aec90012156da3bee7def538efa2015259b08157dc31e093",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://usatoday.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://bloomberg.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.070Z",
+      "durationMs": 108,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "6ae9ba8d9ebd04c681b61c18c0837dfe7a2e56bf8fc252d70eaa1ddf9b3c40e7",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://bloomberg.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://rollingstone.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.179Z",
+      "durationMs": 108,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "17105668cd44db9448a093b9fdf869201f05858fe4863595e33bca98d21137e3",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://rollingstone.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://economist.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.291Z",
+      "durationMs": 112,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "82dd8fdcb7eb957d6a1254eda97d3f97c20444b8cd68f10487311a4a1ca18378",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://economist.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://billboard.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.402Z",
+      "durationMs": 111,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "26ba3a428fb2ffeb23883fcf272fea4e78093baee12132771be447a58216c8de",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://billboard.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://deadline.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.503Z",
+      "durationMs": 101,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "c37493d8e7044d69e4fa03d86287e8d238032d292fc42ce3bacd998f06736795",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://deadline.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://reuters.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.614Z",
+      "durationMs": 110,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "abca4fce5f9dcc3c4dc51cfe95e0a6b20cb102c690f1b5bf9984f2b23d7c2214",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://reuters.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://cnn.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.730Z",
+      "durationMs": 116,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "185e0a9c18088486c6241aaa5ad78ef0ccb597cf1b8dd2165bda53c517ca8479",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://cnn.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://variety.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.844Z",
+      "durationMs": 114,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "a5b3ce24df31a7ef2afc94d876fb8d9c95d861605edaaa360b00b3da142ed54c",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://variety.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://forbes.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:34.944Z",
+      "durationMs": 100,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "dc4b40a01054c7c48c65914ae61232807683956d8667e00aaf66f97ce7fa2258",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://forbes.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    },
+    {
+      "targetUrl": "https://bbcgoodfood.com/",
+      "endpoint": "https://gateway.tollbit.com/dev/v2/rates/{url}",
+      "requestedAt": "2026-08-19T17:25:35.068Z",
+      "durationMs": 124,
+      "status": 403,
+      "contentType": "application/problem+json; charset=utf-8",
+      "bodySha256": "ba7e597f57136551ad1065aa0f49181c299cc02a8d64c62e2059795ae3cf3378",
+      "body": {
+        "detail": "The content provider has disallowed access to this page.",
+        "instance": "/dev/v2/rates/https://bbcgoodfood.com/",
+        "status": 403,
+        "title": "Forbidden",
+        "type": "about:blank"
+      },
+      "error": null
+    }
+  ]
+}

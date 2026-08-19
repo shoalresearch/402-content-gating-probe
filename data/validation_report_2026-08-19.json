@@ -1,0 +1,1239 @@
+{
+  "schemaVersion": 1,
+  "stamp": "2026-08-19",
+  "pass": true,
+  "assertions": [
+    {
+      "name": "same publisher frame",
+      "pass": true,
+      "detail": "108/108"
+    },
+    {
+      "name": "same publisher identities",
+      "pass": true,
+      "detail": "108 unique"
+    },
+    {
+      "name": "no publisher returned a valid x402 challenge",
+      "pass": true,
+      "detail": "0 compliant"
+    },
+    {
+      "name": "every HTTP 402 retained challenge evidence",
+      "pass": true,
+      "detail": "16/16"
+    },
+    {
+      "name": "sensitive HTTP headers excluded",
+      "pass": true,
+      "detail": "authorization/cookie/set-cookie absent from final and redirect headers"
+    },
+    {
+      "name": "client IPv4 evidence redacted",
+      "pass": true,
+      "detail": "no IPv4 literal remains in serialized body evidence"
+    },
+    {
+      "name": "all baseline TollBit publishers were rate-checked",
+      "pass": true,
+      "detail": "13 targets"
+    },
+    {
+      "name": "TollBit credential material not serialized",
+      "pass": true,
+      "detail": "credential-bearing fields and JWT-like values absent"
+    },
+    {
+      "name": "x402 registry fetched completely",
+      "pass": true,
+      "detail": "15073/15073"
+    },
+    {
+      "name": "x402 registry pages have verifiable receipts",
+      "pass": true,
+      "detail": "16 pages"
+    },
+    {
+      "name": "known x402 endpoint returned a valid unpaid challenge",
+      "pass": true,
+      "detail": "2 payment options"
+    },
+    {
+      "name": "known x402 endpoint returned data after payment",
+      "pass": true,
+      "detail": "1 result(s)"
+    },
+    {
+      "name": "paid control has a successful Base receipt",
+      "pass": true,
+      "detail": "0xdf5ef8266b2edf073fbe85340fe037b5538de7295f007820848dd7eb657d85f2"
+    }
+  ],
+  "baseline": {
+    "stamp": "2026-06-28 to 2026-07-04",
+    "domains": 108,
+    "statusCounts": {
+      "200": 54,
+      "202": 1,
+      "401": 2,
+      "402": 10,
+      "403": 35,
+      "406": 2,
+      "451": 1,
+      "ERR": 3
+    },
+    "responseCounts": {
+      "Auth required": 2,
+      "Blocks AI crawler": 35,
+      "Charges (402)": 10,
+      "Error/timeout": 3,
+      "Legal/geo block": 1,
+      "Not acceptable": 2,
+      "Serves free": 55
+    }
+  },
+  "rerun": {
+    "stamp": "2026-08-19",
+    "domains": 108,
+    "statusCounts": {
+      "200": 52,
+      "202": 1,
+      "401": 2,
+      "402": 16,
+      "403": 31,
+      "406": 2,
+      "451": 1,
+      "ERR": 3
+    },
+    "responseCounts": {
+      "Auth required": 2,
+      "Blocks AI crawler": 31,
+      "Error/timeout": 3,
+      "Legal/geo block": 1,
+      "Not acceptable": 2,
+      "Returned 402": 16,
+      "Serves free": 53
+    },
+    "http402Count": 16,
+    "http402ChallengeTypeCounts": {
+      "manual-contact": 6,
+      "tollbit": 10
+    },
+    "x402CompliantCount": 0,
+    "errors": 3,
+    "errorDomains": [
+      "telegraph.co.uk",
+      "washingtonpost.com",
+      "npr.org"
+    ]
+  },
+  "tollbit": {
+    "targets": 13,
+    "statusCounts": {
+      "403": 13
+    },
+    "ratesReturned": 0
+  },
+  "census": {
+    "totalEndpoints": 15073,
+    "distinctDomains": 1570,
+    "domainsWithCalls": 1561,
+    "totalPaidCalls30d": 317660,
+    "publisherDomainsChecked": 108,
+    "publisherDomainsFound": []
+  },
+  "x402PositiveControl": {
+    "unpaidStatus": 402,
+    "x402Version": 2,
+    "acceptedNetworks": [
+      "eip155:8453",
+      "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+    ],
+    "paidStatus": 200,
+    "priceUsd": 0.01,
+    "transactionHash": "0xdf5ef8266b2edf073fbe85340fe037b5538de7295f007820848dd7eb657d85f2",
+    "receiptStatus": "0x1"
+  },
+  "changes": [
+    {
+      "domain": "cnet.com",
+      "baselineStatus": "403",
+      "rerunStatus": "200",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Serves free",
+      "changed": true,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "politico.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "hollywoodreporter.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "bbc.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "complex.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "apnews.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "theathletic.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "yelp.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "people.com",
+      "baselineStatus": "403",
+      "rerunStatus": "402",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Returned 402",
+      "changed": true,
+      "rerunChallengeKind": "manual-contact",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "vanityfair.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "buzzfeed.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "vogue.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "kotaku.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "thedailybeast.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "bonappetit.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "dailymail.co.uk",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "telegraph.co.uk",
+      "baselineStatus": "ERR",
+      "rerunStatus": "ERR",
+      "baselineResponse": "Error/timeout",
+      "rerunResponse": "Error/timeout",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "reddit.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "techcrunch.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "semafor.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "fastcompany.com",
+      "baselineStatus": "403",
+      "rerunStatus": "402",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Returned 402",
+      "changed": true,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "wired.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "ycombinator.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "ft.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "allrecipes.com",
+      "baselineStatus": "403",
+      "rerunStatus": "402",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Returned 402",
+      "changed": true,
+      "rerunChallengeKind": "manual-contact",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "thesun.co.uk",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "tomshardware.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "seriouseats.com",
+      "baselineStatus": "403",
+      "rerunStatus": "402",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Returned 402",
+      "changed": true,
+      "rerunChallengeKind": "manual-contact",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "britannica.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "pcmag.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "usatoday.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "theguardian.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "gizmodo.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "bloomberg.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "wikipedia.org",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "fortune.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "epicurious.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "time.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "rollingstone.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "washingtonpost.com",
+      "baselineStatus": "ERR",
+      "rerunStatus": "ERR",
+      "baselineResponse": "Error/timeout",
+      "rerunResponse": "Error/timeout",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "zdnet.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "theatlantic.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "independent.co.uk",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "latimes.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "genius.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "healthline.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "economist.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "billboard.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "medium.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "hbr.org",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "deadline.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "webmd.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "nbcnews.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "theverge.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "businessinsider.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "reuters.com",
+      "baselineStatus": "401",
+      "rerunStatus": "401",
+      "baselineResponse": "Auth required",
+      "rerunResponse": "Auth required",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "npr.org",
+      "baselineStatus": "ERR",
+      "rerunStatus": "ERR",
+      "baselineResponse": "Error/timeout",
+      "rerunResponse": "Error/timeout",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "newyorker.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "arstechnica.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "salon.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "engadget.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "foxnews.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "lifehacker.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "substack.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "spiegel.de",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "cnn.com",
+      "baselineStatus": "451",
+      "rerunStatus": "451",
+      "baselineResponse": "Legal/geo block",
+      "rerunResponse": "Legal/geo block",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "pitchfork.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "motherjones.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "axios.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "ign.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "mashable.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "wsj.com",
+      "baselineStatus": "401",
+      "rerunStatus": "401",
+      "baselineResponse": "Auth required",
+      "rerunResponse": "Auth required",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "variety.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "tripadvisor.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "nymag.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "forbes.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "huffpost.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "stackoverflow.com",
+      "baselineStatus": "200",
+      "rerunStatus": "403",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": true,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "quora.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "nationalgeographic.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "nature.com",
+      "baselineStatus": "406",
+      "rerunStatus": "406",
+      "baselineResponse": "Not acceptable",
+      "rerunResponse": "Not acceptable",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "propublica.org",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "theintercept.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "lemonde.fr",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "vice.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "404media.co",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "vulture.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "polygon.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "entrepreneur.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "theinformation.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "slate.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "manual-contact",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "espn.com",
+      "baselineStatus": "200",
+      "rerunStatus": "202",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": true,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "inc.com",
+      "baselineStatus": "403",
+      "rerunStatus": "402",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Returned 402",
+      "changed": true,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "vox.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "nytimes.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "imdb.com",
+      "baselineStatus": "202",
+      "rerunStatus": "403",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": true,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "gq.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "fandom.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "manual-contact",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "wikihow.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "cnbc.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "aljazeera.com",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "nih.gov",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "bbcgoodfood.com",
+      "baselineStatus": "402",
+      "rerunStatus": "402",
+      "baselineResponse": "Charges (402)",
+      "rerunResponse": "Returned 402",
+      "changed": false,
+      "rerunChallengeKind": "tollbit",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "investopedia.com",
+      "baselineStatus": "403",
+      "rerunStatus": "402",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Returned 402",
+      "changed": true,
+      "rerunChallengeKind": "manual-contact",
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "merriam-webster.com",
+      "baselineStatus": "403",
+      "rerunStatus": "403",
+      "baselineResponse": "Blocks AI crawler",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "wordpress.com",
+      "baselineStatus": "200",
+      "rerunStatus": "403",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Blocks AI crawler",
+      "changed": true,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "tumblr.com",
+      "baselineStatus": "406",
+      "rerunStatus": "406",
+      "baselineResponse": "Not acceptable",
+      "rerunResponse": "Not acceptable",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    },
+    {
+      "domain": "geeksforgeeks.org",
+      "baselineStatus": "200",
+      "rerunStatus": "200",
+      "baselineResponse": "Serves free",
+      "rerunResponse": "Serves free",
+      "changed": false,
+      "rerunChallengeKind": null,
+      "rerunX402Compliant": false
+    }
+  ]
+}
